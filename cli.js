@@ -65,6 +65,7 @@ const run = async () => {
 		theLines.sort((a, b) => {
 			return b.user.length - a.user.length;
 		});
+		const width = theLines[0].user.length
 
 		const separator = chalk.grey('|');
 		const {filter, markdown} = cli.flags || '';
@@ -73,8 +74,8 @@ const run = async () => {
 			if (!line.comment.match(filter)) {
 				return;
 			}
-			if (line.user.length < 14 && !markdown) {
-				line.user += ' '.repeat(14 - line.user.length);
+			if (line.user.length < width && !markdown) {
+				line.user += ' '.repeat(width - line.user.length);
 			}
 			if (markdown) {
 				console.log(`- ${chalk.cyan(line.hash)} ${line.comment} ${chalk.green(`(**${line.user}**)`)}`);
