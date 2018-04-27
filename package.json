@@ -1,0 +1,21 @@
+{
+  "name": "releaz",
+  "version": "0.0.0",
+  "description": "A CLI tool for generate release note",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": "git@github.com:LitoMore/releaz.git",
+  "author": "LitoMore <litomore@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "xo": "^0.20.3"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "execa": "^0.10.0",
+    "import-lazy": "^3.1.0",
+    "meow": "^5.0.0"
+  }
+}
