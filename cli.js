@@ -65,7 +65,7 @@ const run = async () => {
 		theLines.sort((a, b) => {
 			return b.user.length - a.user.length;
 		});
-		const width = theLines[0].user.length
+		const width = theLines[0].user.length;
 
 		const separator = chalk.grey('|');
 		const {filter, markdown} = cli.flags || '';
