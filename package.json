@@ -1,6 +1,6 @@
 {
   "name": "releaz",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A CLI tool for generate release note",
   "bin": "cli.js",
   "scripts": {
