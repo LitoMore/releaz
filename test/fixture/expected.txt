@@ -1,0 +1,5 @@
+94f12f2 LitoMore Fix code style
+e837b66 LitoMore Update screenshot
+fa475e0 LitoMore Fix username width
+42857c7 LitoMore 0.1.1
+9077124 LitoMore Ignore unused files

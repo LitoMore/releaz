@@ -1,15 +1,15 @@
 {
   "name": "releaz",
   "version": "0.1.4",
-  "description": "A CLI tool for generate release note",
-  "bin": "cli.js",
+  "description": "A tool for generate release note",
   "scripts": {
-    "test": "xo"
+    "test": "xo && ava"
   },
   "repository": "git@github.com:LitoMore/releaz.git",
   "author": "LitoMore <litomore@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.25.0",
     "xo": "^0.20.3"
   },
   "dependencies": {

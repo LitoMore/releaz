@@ -1,0 +1,17 @@
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const test = require('ava');
+const releaz = require('..');
+
+const expected = fs.readFileSync(path.join(__dirname, 'fixture/expected.txt'), 'utf8');
+
+test(t => {
+	const actual = releaz({
+		from: '54d3a04',
+		to: '94f12f2',
+		format: '%h %an %s'
+	});
+  t.is(expected, actual);
+});
