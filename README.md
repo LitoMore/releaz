@@ -40,6 +40,10 @@ console.log(result)
 
 > Here is `git log` [documentation](https://git-scm.com/docs/git-log).
 
+## Related
+
+- [execa](https://github.com/sindresorhus/execa) - A better `child_process`
+
 ## License
 
 MIT © [LitoMore](https://github.com/LitoMore)
