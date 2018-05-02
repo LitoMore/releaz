@@ -20,8 +20,7 @@ const releaz = require('releaz')
 const chalk = require('chalk')
 
 const result = releaz({
-  from: '54d3a04',
-  to: '94f12f2',
+  range: 'fa475e0..HEAD'
   format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
 })
 
@@ -34,9 +33,8 @@ console.log(result)
 
 #### Options
 
-- **from**: `git log` revision range from
-- **to**: `git log` revision range to
-- **format**: `git log` [pretty formats](https://git-scm.com/docs/git-log#_pretty_formats) placeholders
+- **range**: Revision range
+- **format**: [pretty formats](https://git-scm.com/docs/git-log#_pretty_formats) placeholders
 
 > Here is `git log` [documentation](https://git-scm.com/docs/git-log).
 
