@@ -9,9 +9,8 @@ const expected = fs.readFileSync(path.join(__dirname, 'fixture/expected.txt'), '
 
 test(t => {
 	const actual = releaz({
-		from: '54d3a04',
-		to: '94f12f2',
+		range: '9077124',
 		format: '%h %an %s'
 	});
-  t.is(expected, actual);
+  t.is(actual, expected);
 });

@@ -3,17 +3,14 @@
 const execa = require('execa');
 
 module.exports = opt => {
-	const {
-		from = '',
-		to = 'HEAD',
-		format = '- %h %an %s'
-	} = opt;
-	const {stdout} = execa.sync('git', [
-		'log',
-		`--pretty=${format}`,
-		'--abbrev-commit',
-		from + '..' + to
-	]);
+	const {range = null, format = '- %h %an %s'} = opt;
+	const args = ['log', `--pretty=${format}`];
+
+	if (range) {
+		args.push(range);
+	}
+
+	const {stdout} = execa.sync('git', args);
 
 	if (!stdout) {
 		return '';
