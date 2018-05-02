@@ -20,7 +20,7 @@ const releaz = require('releaz')
 const chalk = require('chalk')
 
 const result = releaz({
-  range: 'fa475e0..HEAD'
+  range: 'fa475e0..HEAD',
   format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
 })
 
