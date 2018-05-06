@@ -12,5 +12,5 @@ test(t => {
 		range: '9077124',
 		format: '%h %an %s'
 	});
-  t.is(actual, expected);
+	t.is(actual, expected);
 });
