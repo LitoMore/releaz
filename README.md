@@ -40,6 +40,7 @@ console.log(result)
 
 ## Related
 
+- [releaz-cli](https://github.com/LitoMore/releaz-cli) - CLI for this module
 - [execa](https://github.com/sindresorhus/execa) - A better `child_process`
 
 ## License
