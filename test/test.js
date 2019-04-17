@@ -7,7 +7,7 @@ const releaz = require('..');
 
 const expected = fs.readFileSync(path.join(__dirname, 'fixture/expected.txt'), 'utf8');
 
-test(t => {
+test('test range and format options', t => {
 	const actual = releaz({
 		range: '9077124',
 		format: '%h %an %s'

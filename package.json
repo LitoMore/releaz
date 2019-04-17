@@ -9,10 +9,10 @@
   "author": "LitoMore <litomore@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.25.0",
-    "xo": "^0.21.0"
+    "ava": "^1.4.1",
+    "xo": "^0.24.0"
   },
   "dependencies": {
-    "execa": "^0.10.0"
+    "execa": "^1.0.0"
   }
 }
