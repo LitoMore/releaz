@@ -24,9 +24,9 @@ const chalk = require('chalk');
     range: 'fa475e0..HEAD',
     format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
   });
-})();
 
-console.log(result);
+  console.log(result);
+})();
 ```
 
 ## API
