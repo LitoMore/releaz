@@ -16,15 +16,17 @@ $ npm i releaz
 ## Usage
 
 ```javascript
-const releaz = require('releaz')
-const chalk = require('chalk')
+const releaz = require('releaz');
+const chalk = require('chalk');
 
-const result = releaz({
-  range: 'fa475e0..HEAD',
-  format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
-})
+(async () => {
+  const result = await releaz({
+    range: 'fa475e0..HEAD',
+    format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
+  });
+})();
 
-console.log(result)
+console.log(result);
 ```
 
 ## API
