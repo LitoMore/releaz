@@ -2,7 +2,7 @@
 
 const execa = require('execa');
 
-module.exports = opt => {
+module.exports = async opt => {
 	const {range = null, format = '- %h %an %s'} = opt;
 	const args = ['log', `--pretty=${format}`];
 
@@ -10,7 +10,7 @@ module.exports = opt => {
 		args.push(range);
 	}
 
-	const {stdout} = execa.sync('git', args);
+	const {stdout} = await execa('git', args);
 
 	if (!stdout) {
 		return '';
