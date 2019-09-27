@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^1.4.1",
-    "xo": "^0.24.0"
+    "xo": "^0.25.3"
   },
   "dependencies": {
     "execa": "^1.0.0"
