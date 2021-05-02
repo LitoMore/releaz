@@ -2,17 +2,49 @@
   "name": "releaz",
   "version": "3.0.0",
   "description": "A tool for generate release note",
+  "author": "LitoMore <litomore@gmail.com>",
+  "type": "module",
+  "exports": "./dist/source/index.js",
+  "types": "dist/source",
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "dist/source"
+  ],
   "scripts": {
-    "test": "xo && ava"
+    "build": "del-cli dist && tsc",
+    "test": "npm run build && xo && ava"
   },
   "repository": "git@github.com:LitoMore/releaz.git",
-  "author": "LitoMore <litomore@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "ava": "^1.4.1",
-    "xo": "^0.25.3"
-  },
   "dependencies": {
-    "execa": "^1.0.0"
+    "execa": "^5.0.0"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^1.1.1",
+    "@sindresorhus/tsconfig": "^1.0.2",
+    "ava": "^3.15.0",
+    "del-cli": "^3.0.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "xo": "^0.39.1"
+  },
+  "ava": {
+    "files": [
+      "test/test.ts"
+    ],
+    "extensions": {
+      "ts": "module"
+    },
+    "nonSemVerExperiments": {
+      "configurableModuleFormat": true
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm"
+    ]
+  },
+  "xo": {
+    "prettier": true
   }
 }

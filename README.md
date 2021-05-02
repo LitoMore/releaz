@@ -1,8 +1,7 @@
 # releaz
 
-[![](https://img.shields.io/travis/LitoMore/releaz/master.svg)](https://travis-ci.org/LitoMore/releaz)
 [![](https://img.shields.io/npm/v/releaz.svg)](https://www.npmjs.com/package/releaz)
-[![](https://img.shields.io/npm/l/releaz.svg)](https://github.com/LitoMore/releaz/blob/master/LICENSE)
+[![](https://img.shields.io/npm/l/releaz.svg)](https://github.com/LitoMore/releaz/blob/main/LICENSE)
 [![](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 A tool for generate release note based on `git log` command
@@ -16,17 +15,15 @@ $ npm i releaz
 ## Usage
 
 ```javascript
-const releaz = require('releaz');
-const chalk = require('chalk');
+import releaz from 'releaz';
+import chalk from 'chalk';
 
-(async () => {
-  const result = await releaz({
-    range: 'fa475e0..HEAD',
-    format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
-  });
+const result = await releaz({
+  range: 'fa475e0..HEAD',
+  format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
+});
 
-  console.log(result);
-})();
+console.log(result);
 ```
 
 ## API
