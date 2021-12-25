@@ -8,8 +8,8 @@ A tool for generate release note based on `git log` command
 
 ## Install
 
-```bash
-$ npm i releaz
+```shell
+npm i releaz
 ```
 
 ## Usage
@@ -19,8 +19,8 @@ import releaz from 'releaz';
 import chalk from 'chalk';
 
 const result = await releaz({
-  range: 'fa475e0..HEAD',
-  format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`
+	range: 'fa475e0..HEAD',
+	format: `- ${chalk.cyan('%h')} ${chalk.blue('%an')} %s`,
 });
 
 console.log(result);
