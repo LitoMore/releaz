@@ -1,4 +1,4 @@
-import execa from 'execa';
+import {execa} from 'execa';
 
 export type Options = {
 	range?: string;
@@ -15,7 +15,7 @@ const releaz = async (options: Options) => {
 
 	const {stdout} = await execa('git', args);
 
-	return stdout || '';
+	return stdout;
 };
 
 export default releaz;
