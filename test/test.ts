@@ -1,17 +1,13 @@
-import fs from 'node:fs';
-import url from 'node:url';
-import path from 'node:path';
 import test from 'ava';
 import releaz from '../source/index.js';
 
-console.log(import.meta.url);
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-
-test('test range and format options', async (t) => {
-	const expected = fs.readFileSync(
-		path.join(__dirname, 'fixture/expected.txt'),
-		'utf8',
-	);
+test('test range and format options', async t => {
+	const expected = [
+		'9077124 LitoMore Ignore unused files',
+		'54d3a04 LitoMore 0.1.0',
+		'a3eb940 LitoMore Initial commit',
+		'6485437 LitoMore Initial commit',
+	].join('\n');
 
 	const actual = await releaz({
 		range: '9077124',

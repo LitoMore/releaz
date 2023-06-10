@@ -1,0 +1,6 @@
+{
+  "pretter": true,
+  "rules": {
+    "ava/no-ignored-test-files": "off"
+  }
+}

@@ -1,6 +1,6 @@
 {
 	"extends": "@sindresorhus/tsconfig",
-	"module": "ES2020",
+	"module": "ESNext",
 	"moduleResolution": "node",
 	"compilerOptions": {
 		"esModuleInterop": true,

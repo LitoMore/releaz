@@ -1,4 +1,0 @@
-9077124 LitoMore Ignore unused files
-54d3a04 LitoMore 0.1.0
-a3eb940 LitoMore Initial commit
-6485437 LitoMore Initial commit
