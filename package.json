@@ -1,6 +1,6 @@
 {
   "name": "releaz",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "A tool for generate release note",
   "author": "LitoMore <litomore@gmail.com>",
   "type": "module",
