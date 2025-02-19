@@ -1,4 +1,4 @@
-import {execa} from 'execa';
+import spawn from 'nano-spawn';
 
 export type Options = {
 	range?: string;
@@ -7,13 +7,13 @@ export type Options = {
 
 const releaz = async (options: Options) => {
 	const {range, format = '- %h %an %s'} = options;
-	const args = ['log', `--pretty=format:${format}`];
+	const arguments_ = ['log', `--pretty=format:${format}`];
 
 	if (range) {
-		args.push(range);
+		arguments_.push(range);
 	}
 
-	const {stdout} = await execa('git', args);
+	const {stdout} = await spawn('git', arguments_);
 
 	return stdout;
 };
